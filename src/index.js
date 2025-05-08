@@ -12,4 +12,3 @@ res.status(200).send("Hello World")
 app.listen(port, () => {    // start server
     console.log(`Server is running on ${port}`);
 })
-
