@@ -1,0 +1,105 @@
+Config file:
+A config file stores reusable settings like database credentials separately from your main code. 
+It helps keep your code clean, organized, and easy to update.
+ex : db.js
+
+
+What is a controllers folder?
+It's where you put functions that handle what happens when someone visits a route.
+It keeps your route logic clean and organized — instead of writing everything in one big file.
+
+
+middlewares :
+middleware functions are used to handle things like authentication or logging. 
+For example, I might create an authentication middleware to check if a user is 
+logged in before allowing them to access certain routes. The middleware would either
+redirect them to the login page or allow them to proceed to the requested page
+
+
+model: 
+
+"The model folder contains schema definitions for database collections. 
+It handles how data is structured, validated, 
+and interacted with in the database, keeping the code clean and organized.
+
+each model file defines one type of data and how it should be stored in the database
+
+Schema definition means setting rules for how your data should look in the database.
+
+For example, in a User schema, you define:
+
+name should be a string,
+
+email must be unique,
+
+password is required.
+
+Routes:
+We use a routes folder to separate route logic and keep the code scalable and easy to manage, 
+especially in big apps.
+
+The routes folder is where we define URLs 
+(like /users, /products) and connect them to functions that handle the request.
+
+// routes/userRoutes.js handles /users
+// routes/productRoutes.js handles /products
+
+
+
+/app
+├── config/
+│   ├── db.conf.js
+│   ├── app.conf.js
+│   ├── app.keys.js
+│   ├── db.keys.js
+│   ├── init.js
+├── database/
+│   ├── Redis.database.js
+│   ├── Mongo.database.js
+│   ├── init.js
+├── routes/
+│   ├── App.routes.js
+│   ├── Auth.routes.js
+│   ├── Dashboard.routes.js
+├── utils/
+│   ├── Logger.util.js
+├── middleware/
+│   ├── App.middleware.js
+│   ├── ErrorHandler.middleware.js
+│   ├── init.js
+├── models/
+│   ├── User.model.js
+├── controllers/
+│   ├── App.controller.js
+│   ├── User.controller.js
+├── helpers/
+│   ├── App.helper.js
+├── views/
+│   ├── layouts/
+│   ├── partials/
+│   ├── support/
+│   │   ├── index.ejs
+│   ├── documentation/
+│   │   ├── index.ejs
+│   ├── index.ejs
+│   ├── about.ejs
+│   ├── contact.ejs
+/public
+├── dist/
+├── images/
+│   ├── dashboard/
+│   ├── auth/
+│   ├── documentation/      
+├── sitemap.xml
+/samples
+├── .env.sample
+├── db.conf.sample
+├── app.conf.sample
+├── app.keys.sample
+/src
+├── javascript/
+├── css/
+/node_modules
+/server.js
+/package.json
+/.env
